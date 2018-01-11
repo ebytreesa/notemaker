@@ -1,0 +1,176 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	font-size: 20px;
+
+	
+}
+
+.container{
+	position:relative;
+	width:70%;
+	margin:0 auto;
+	border:1px solid ;
+	min-height:500px;
+	padding:10px 15px;
+		
+}
+
+.header{
+
+}
+
+a{
+	text-decoration: none;
+}
+
+nav{
+	height: 40px;
+	background-color: grey;
+	border-radius: 5px;
+	margin-bottom: 20px;
+
+}
+
+nav ul{
+	list-style: none;
+	margin: 0 auto;
+	
+}
+
+nav ul li{
+	display: inline;
+	
+	float: left;
+}
+
+nav ul li a{
+	display: inline-block;
+	padding: 10px 25px;
+	/*border: 1px solid green;*/
+	color: white;
+	border-radius: 5px;
+	font-size: 95%;
+}
+
+nav ul li a:hover{
+	background-color: red;
+}
+
+.form{
+	width:60%;
+	margin:0 auto;
+	padding:10px 15px;
+	background-color: grey;
+	border-radius: 5px;
+}
+
+.col-30 {
+  float: left;
+  width: 20%;
+  margin-top: 6px;
+ 
+  font-weight: 
+ 
+}
+label{
+	padding: 5px 6px 0 6px;
+	display: inline-block;
+	 font-size: 90%;
+}
+
+.col-90 {
+  float: left;
+  width: 80%;
+  margin-top: 6px;
+}
+input{
+	box-sizing: border-box;
+	box-shadow: none;
+	width:90%;
+	height: 30px;
+	border-radius: 5px;
+
+}
+
+.btn-success{	
+	width:100px;
+	margin-left: 30%;
+	background-color: green;
+	border-radius: 5px;
+	margin-top: 9px;
+}
+
+.btn-danger{
+	display: inline-block;
+	height: 30px;
+	width:100px;
+	color: black;
+	background-color: red;
+	border-radius: 5px;
+	/*margin-top: 6px;*/
+	text-align: center;
+	text-decoration: none;
+}
+.errorMsg{
+	border:1px solid red;
+	color: red;
+
+}
+
+
+
+.success
+{
+	height: 20px;
+	width: 100%;
+	background-color: green;
+	
+}
+
+@media only screen  (min-width: 150px) and (max-width: 768px) {
+	body{
+		font-size: 80%;
+	}
+
+.container{
+		width: 100%;
+		/*margin:0 auto;*/
+	}
+.form{
+	width: 90%;
+	
+}
+.col-30, .col-90, input {
+    width: 100%;
+    margin-top: 0;
+    
+  }
+
+nav{
+	height: 120px;
+}
+
+nav ul{
+	padding-left: 0;	
+	
+}
+
+nav ul li{
+	text-align: center;
+	width: 50%;
+	/*display: inline;*/
+}
+
+nav ul li a{
+	
+	padding: 10px 0px;
+	/*border: 1px solid green;*/
+	display: block;
+	font-size: 16px;
+}
+
+
+
+}
+
