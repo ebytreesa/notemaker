@@ -149,12 +149,15 @@ input{
 
 .notes{
 	width: 27%;
-	background-color: #ccffff;
+	/*background-color: #ccffff;*/
 	margin:10px ;
 	float: left;
 	height: auto;
 	padding: 15px;
 	border-radius: 8px;
+	display: block;
+	height: 300px;
+	overflow: scroll;
 	
 
 }

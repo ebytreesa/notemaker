@@ -4,4 +4,5 @@
 	<link rel="stylesheet" href="style.css">
 	<script src="js/jquery.js"></script>
 	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/functions.js"></script>
 	

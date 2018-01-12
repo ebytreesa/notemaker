@@ -44,7 +44,7 @@ if(!isset($_SESSION['username'])){
 <?php ?>
 
       <h3 class="welcome"> welcome<strong style="color:red;"> <?php echo  $_SESSION['username']; ?></strong> </h3>
-      <button class="logoutLink"><a href="logout.php">Logout</a></button>
+      <a href="logout.php" class="logoutLink">Logout</a>
        
       <div class="noteForm" style="display:;">
       <!-- Form to create note -->
@@ -116,6 +116,13 @@ if(!isset($_SESSION['username'])){
                 $('#content').val('');
 
                 $('#displayNotes').html(d);
+                //$('.notes').css('background-color', colours[Math.floor(Math.random()*colours.length)]);
+                $(function() {
+    $(".notes").each(function() {
+    
+        $(this).css("background-color", colours[Math.floor(Math.random()*colours.length)]);
+    });
+});
             }
           });  
     }
