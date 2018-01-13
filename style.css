@@ -44,32 +44,32 @@ section{
 	padding-top: -140px;
 }
 
-#createForm{
+#createForm, #editNote{
 	background-color:#e6f2ff;
 	min-height: 100px;
 	height: auto;
 	padding: 10px;
 
 }
-#createForm .submitBtn{
+#createForm .submitBtn, #editNote .submitBtn{
 	width: 50%;
 	margin-left: 33%;
 	margin-top: 10px;
 }
 
-#createForm label{
+#createForm label, #editNote label{
 	/*margin:20px 0 10px 0;*/
 	width: 25%;
 
 }
 
-#createForm input{
+#createForm input, #editNote input{
 	margin:20px 0 10px 0;
 	width: 72%;
 
 }
 
-#createForm textarea{
+#createForm textarea, #editNote textarea{
 	margin:20px 0 10px 0;
 	width: 70%;
 	height: 100px;

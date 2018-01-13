@@ -19,32 +19,93 @@ if (isset($_POST['submit']))
 }
 
 ?>
+<?php
+// session_start();
+if(!isset($_SESSION['username'])){
+  header('Location:index.php');
+  exit;
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
-	
+  <?php 
+    include('/includes/header.php'); 
+  ?>
+  <title> edit Note </title>      
 </head>
 <body>
-	<div class="container">
-		<?php include('includes/topNav.php');
-			include('includes/dbcon.php');
-			$note_id = $_GET['id'];
-			$query = "SELECT * FROM notes WHERE id=$note_id";
-			$result =$mysqli->query($query);
-			$row  = $result->fetch_object();
-		 ?>
-		<h1>Edit Note&nbsp;<small>Edit Note</small></h1>
-		<form method="POST">
-			
-			<label>title</label>
-			<input type="text" class="form-control" name="title" value="<?php echo $row->title;?>" required>
-			<br>
-			<label>Content</label>
-			<textarea  class="form-control" name="content" required><?php echo $row->content;?></textarea> 
-			<br>
-			<button><a href="profile.php">Cancel</a></button> 
-			<input type="submit" name="submit" class="btn btn-primary" value="Edit">
-		</form>
-	</div>
+<body>
+	<div class="container" style="position:relative;">
+	  <?php 
+	  include('/includes/dbcon.php');
+		
+	  
+	  ?>  
+	 
+	<section>
+
+      	<h3 class="welcome"> welcome<strong style="color:red;"> <?php echo  $_SESSION['username']; ?></strong> </h3>
+        <a href="logout.php" class="logoutLink">Logout</a>
+		<div class="noteForm">		
+			<h3>Edit Note</h3>
+			<form method="POST" id="editNote">
+				<?php 
+				$note_id = $_GET['id'];
+				$query = "SELECT * FROM notes WHERE id=$note_id";
+				$result =$mysqli->query($query);
+				$row  = $result->fetch_object();
+			 ?>
+				
+				<label>title</label>
+				<input type="text" class="form-control" name="title" value="<?php echo $row->title;?>" required>
+				<br>
+				<label>Content</label>
+				<textarea  class="form-control" name="content" required><?php echo $row->content;?></textarea> 
+				<br>
+				<button><a href="profile.php">Cancel</a></button> 
+				<input type="submit" name="submit" class="btn btn-primary" value="Edit">
+			</form>
+		</div>
+	</section>
+</div>
+<script type="text/javascript">
+  $(document).ready(function(){ 
+// creating note form validating and submitting using jquery and ajax
+      $("#editNote").validate({
+        rules:{
+            title:{
+                required:true,
+            },
+
+            content:{
+                required: true,
+           },   
+            
+        },
+
+        messages:{
+            title:{
+                required: "This field is required",
+            },
+            
+            content:{
+                required: "This field is required",
+                
+            }
+            
+        },
+
+        submitHandler: function(form){
+            
+            form.submit();
+        }
+    }); 
+
+        
+ });
+  </script>
+
 </body>
 </html>
