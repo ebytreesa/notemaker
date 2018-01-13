@@ -10,7 +10,7 @@ if (isset($_POST['submit']))
 	$query = "UPDATE notes SET title='$title', content='$content', user_id='$user_id' WHERE id=".$id;
 	if ($mysqli->query($query) === TRUE) 
 	{
-		$_SESSION['success'] = "note being edited successfully";
+		$_SESSION['success'] = "note successfully updated.";
     	header('Location: profile.php');
 	} else 
 	{
@@ -65,7 +65,7 @@ if(!isset($_SESSION['username'])){
 				<textarea  class="form-control" name="content" required><?php echo $row->content;?></textarea> 
 				<br>
 				<button><a href="profile.php">Cancel</a></button> 
-				<input type="submit" name="submit" class="btn btn-primary" value="Edit">
+				<input type="submit" name="submit" class="btn btn-primary" value="Save">
 			</form>
 		</div>
 	</section>

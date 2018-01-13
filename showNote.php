@@ -20,12 +20,15 @@ if (isset($_POST['submit']))
         {
           
           echo "<div class='notes' style=''>";
+          echo "<button><a id='editBtn' href='editNote.php?id=".$row->id ."'>edit</a></button> 
+                <button class='deleteBtn' data-id='".$row->id ."' style='color: red;'>Delete</button>";
           echo "<p>" . $row->created_at . "</p>";
           echo "<h3>" . $row->title . "</h3>";
           echo "<p>" . nl2br($row->content) . "</p>";
-          echo "<button><a id='editBtn' href='editNote.php?id=".$row->id ."'>edit</a></button> 
-                <button class='deleteBtn' data-id='".$row->id ."' style='color: red;'>Delete</button>";
+          
           echo "</div>";
+          
+
         }
       }
 } else
@@ -38,13 +41,16 @@ if (isset($_POST['submit']))
   {
     while ($row = $result->fetch_object())
     {
+      
       echo "<div class='notes' style=''>";
+      echo "<button><a id='editBtn' href='editNote.php?id=".$row->id ."'>edit</a></button> 
+            <button class='deleteBtn' data-id='".$row->id ."' style='color: red;'>Delete</button>";
       echo "<p>" . $row->created_at . "</p>";
       echo "<h3>" . $row->title . "</h3>";
       echo "<p>" . nl2br($row->content) . "</p>";
-      echo "<button><a id='editBtn' href='editNote.php?id=".$row->id ."'>edit</a></button> 
-            <button class='deleteBtn' data-id='".$row->id ."' style='color: red;'>Delete</button>";
+      
       echo "</div>";
+      
     }
   }
 }   
