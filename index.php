@@ -28,11 +28,9 @@
     header('location:profile.php') ;
  else:
 ?> 
-<!-- <section class="loginSection"> -->
+<section> 
     <div class="form">
-    <div class="registerLink">
-        <a href="register.php"><strong>Sign up</strong></a>
-    </div>
+    
     <center><h1>Login</h1></center>
     <?php
     if (isset($_SESSION['errMsg']) && !empty($_SESSION['errMsg'])):
@@ -80,10 +78,15 @@
       </div>
       
     </form>
-<?php endif ?> 
-</div>
-<!-- </section> -->
 
+  <div class="registerLink">
+      <span>Not yet a user?</span>  <a href="register.php"><strong>Sign up</strong></a>
+    </div>
+
+</div>
+
+ </section> 
+<?php endif ?>
 </div>
 <script type="text/javascript">
 

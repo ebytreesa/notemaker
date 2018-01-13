@@ -76,12 +76,18 @@ section{
 	vertical-align: top;
 }
 .loginLink, .registerLink {
-	position: absolute;
+	/*position: absolute;
 	right: 250px;
 	top:10px;
-	font-size: 22px;
-	color: white;
 	
+	color: white;*/
+	font-size: 18px;
+	margin-top: 20px;
+	margin-bottom: 10%;
+}
+
+.loginLink a, .registerLink a {
+	color: white;
 }
 
 .logoutLink{
@@ -151,7 +157,7 @@ input{
 #createForm .error, #editNote .error{
 	color:red;
 	margin-left: 25%;
-	
+
 }
 
 .notes{

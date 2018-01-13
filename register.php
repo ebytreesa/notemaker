@@ -15,9 +15,7 @@
 			// include('/includes/topNav.php'); 
 		?>	
        	<div class="form">
-	       	<div class="loginLink">
-	        	<a href="index.php">Login</a>
-	      	</div>
+	       
 			<center><h1>Sign up</h1></center>
 			<?php
 				session_start();
@@ -79,7 +77,12 @@
 					 </div> -->
 				</div>
 			</form>
+
+			<div class="loginLink">
+	        	<span>Already a user?</span>	<a href="index.php">Login</a>
+	      	</div>
        </div>
+
 	</div>
 
 <script>
