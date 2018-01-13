@@ -15,20 +15,24 @@
 	include('/includes/dbcon.php');
 ?>
 	 
-<header>	
-	<!-- <?php 	include('/includes/topNav.php');   ?> -->
-  
-	
-</header>
-
-
 
  <?php
   if (isset($_SESSION['username'])):/* redirect to profile if the user is logged in*/
     header('location:profile.php') ;
- else:
+  else:
 ?> 
-<section> 
+<section>
+  <?php
+  if (isset($_SESSION['success']) && !empty($_SESSION['success'])):
+  ?>
+      <div class="success"> 
+        <?php
+        echo $_SESSION['success'];
+        unset($_SESSION['success']); ?>
+      </div> 
+    <?php
+  endif
+  ?>   
     <div class="form">
     
     <center><h1>Login</h1></center>

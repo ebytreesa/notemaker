@@ -43,7 +43,7 @@ section{
 .content{
 	padding-top: -140px;
 }
-
+/* css for creating and editing note Forms*/
 #createForm, #editNote{
 	background-color:#e6f2ff;
 	min-height: 100px;
@@ -76,11 +76,7 @@ section{
 	vertical-align: top;
 }
 .loginLink, .registerLink {
-	/*position: absolute;
-	right: 250px;
-	top:10px;
 	
-	color: white;*/
 	font-size: 18px;
 	margin-top: 20px;
 	margin-bottom: 10%;
@@ -176,12 +172,7 @@ input{
 	
 
 }
-/*.registerLink{
-	margin-top: 20px;
-	font-size: 22px;
-	position: absolute;
-	right: 50px;
-}*/
+
 
 
 @media only screen and (min-width: 150px) and (max-width: 768px) {
@@ -192,13 +183,5 @@ input{
 		width: 100%;
 		
 	}
-	/*.col-30 {
-  
-  		width: 100%;
-    }
-	.col-70 {
-	 
-	  width: 100%;
-	 
-	}*/
+	
 }

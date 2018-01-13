@@ -29,10 +29,13 @@ if (isset($_POST['register']))
 		$query = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$pass1')";
 		if ($mysqli->query($query) === TRUE) 
 		{
-			$_SESSION['username'] = $username;
-			$_SESSION['success'] = "You are now registered and logged in ";
-
-			header('Location: profile.php');
+			
+			
+			$_SESSION['success'] = "You are now registered, login to continue  ";
+			header('Location: index.php');
+				
+			
+			
 		} else 
 		{
 	    	echo "Error: " . $sql . "<br>" . $mysqli->error;

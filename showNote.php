@@ -11,8 +11,8 @@ if (isset($_POST['submit']))
   $user_id = $_SESSION['id']; 
   $query = "INSERT INTO notes (title, content, user_id) VALUES ('$title', '$content', '$user_id')";
   $mysqli->query($query);
-
-    $query1 = "SELECT * FROM notes WHERE user_id=$user_id";
+  
+    $query1 = "SELECT * FROM notes WHERE user_id=$user_id ORDER BY created_At DESC";
       $result = $mysqli->query($query1);
       if ($result->num_rows > 0)
       {
@@ -33,9 +33,9 @@ if (isset($_POST['submit']))
       }
 } else
 {     
-  
+    
   $id = $_SESSION['id']; 
-  $query = "SELECT * FROM notes WHERE user_id=$id";
+  $query = "SELECT * FROM notes  WHERE user_id=$id ORDER BY created_at DESC ";
   $result = $mysqli->query($query);
   if ($result->num_rows > 0)
   {
@@ -52,6 +52,8 @@ if (isset($_POST['submit']))
       echo "</div>";
       
     }
+  }else{
+    echo "<p>No notes found</p>";
   }
 }   
 ?>

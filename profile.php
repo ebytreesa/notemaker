@@ -34,11 +34,7 @@ if(!isset($_SESSION['username'])){
   endif
   ?>  
  
-<header>	
-	<?php 	
-  
-     ?> 
-</header> 
+
 
 <section>
 <?php ?>
@@ -106,7 +102,7 @@ if(!isset($_SESSION['username'])){
     function submitForm(){
       var data = $('#createForm').serialize();
       
-           $.ajax({
+          $.ajax({
             type: 'POST',
             url: 'showNote.php',
             
@@ -116,13 +112,13 @@ if(!isset($_SESSION['username'])){
                 $('#content').val('');
 
                 $('#displayNotes').html(d);
-                //$('.notes').css('background-color', colours[Math.floor(Math.random()*colours.length)]);
+                $('.success').text('created');
                 $(function() {
-    $(".notes").each(function() {
-    
-        $(this).css("background-color", colours[Math.floor(Math.random()*colours.length)]);
-    });
-});
+                  $(".notes").each(function() {
+                  
+                    $(this).css("background-color", colours[Math.floor(Math.random()*colours.length)]);
+                  });
+                });
             }
           });  
     }
