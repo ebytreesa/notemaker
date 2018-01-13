@@ -145,6 +145,13 @@ input{
 
 .error{
 	color: red;
+
+}
+
+#createForm .error, #editNote .error{
+	color:red;
+	margin-left: 25%;
+	
 }
 
 .notes{

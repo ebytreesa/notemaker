@@ -90,11 +90,11 @@ if(!isset($_SESSION['username'])){
 
         messages:{
             title:{
-                required: "This field is required",
+                required: "Title missing.",
             },
             
             content:{
-                required: "This field is required",
+                required: "Please specify some content.",
                 
             }
             

@@ -64,8 +64,9 @@ if(!isset($_SESSION['username'])){
 				<label>Content</label>
 				<textarea  class="form-control" name="content" required><?php echo $row->content;?></textarea> 
 				<br>
-				<button><a href="profile.php">Cancel</a></button> 
-				<input type="submit" name="submit" class="btn btn-primary" value="Save">
+				
+				<input type="submit" name="submit" class="submitBtn" value="Save">
+				<button style="margin-left:53%"><a href="profile.php">Cancel</a></button> 
 			</form>
 		</div>
 	</section>
@@ -87,11 +88,11 @@ if(!isset($_SESSION['username'])){
 
         messages:{
             title:{
-                required: "This field is required",
+                required: "Title missing.",
             },
             
             content:{
-                required: "This field is required",
+                required: "Please specify some content.",
                 
             }
             
