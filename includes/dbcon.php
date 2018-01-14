@@ -1,7 +1,7 @@
 <?php
 
 
-$db         = "magento";
+$db         = "notes";
 $dbhost     = "localhost"; 
 $dbuser     = "root"; 
 $dbpassword = ""; 
