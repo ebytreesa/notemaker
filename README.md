@@ -4,6 +4,7 @@ Data backend uses mysql database.
 ## setting up database
 The website expects a database named 'notes'.  Database set up can be updated by modifying includes/dbcon.php .
 Database diagram is shown below:
+
 ![dbdiagram](notes_db_diagram.PNG)
 # Website functions
 
