@@ -2,7 +2,7 @@
 This is a website for making notes using basic HTML5, CSS3, PHP, Jquery, Ajax. 
 Data backend uses mysql database.
 
-## setting up database
+## Setting up database
 The website expects a database named 'notes'.  Database set up can be updated by modifying includes/dbcon.php .
 Database diagram is shown below:
 
